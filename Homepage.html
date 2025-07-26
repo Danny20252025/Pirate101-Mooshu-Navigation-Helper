@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mooshu Dock Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("images/mooshuhome.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pirate 101 Mooshu Dock Guide</h1>
+  
+  <input type="text" placeholder="Search location... the correct dock/arrival area will show up" id="searchBar">
+
+  <h2>Locations</h2>
+  <div class="dock-list">
+    <a href="location pages/kitanishidock.html" class="btn" data-keywords="Sujimura Village, Moomori Compound, Nishi Dock, Moomori Clanhold Cave, Moomori Clanhold Village, Bandit Cave, Valley of the Titans, Temple, Sujimura Teahouse">Kita Dock</a>
+    <a href="location pages/kitanishidock.html" class="btn"  data-keywords="Sujimura Village, Moomori Compound, Kita Dock, Moomori Clanhold Cave, Moomori Clanhold Village, Bandit Cave, Valley of the Titans, Temple, Sujimura Teahouse">Nishi Dock</a>
+    <a href="location pages/ashendock.html" class="btn" data-keywords="Ashen Roads, Temple of the North Wind">Ashen Dock</a>
+    <a href="location pages/crimsondock.html" class="btn" data-keywords="Temple of the South Wind, Sacred Mountain, Monkey King's Cave">Crimson Dock</a>
+    <a href="location pages/hamamitsugardendocks.html" class="btn" data-keywords="Hamamitsu Garden, Zhu Ro's Teahouse">Hamamitsu Garden Docks</a>
+    <a href="location pages/icydock.html" class="btn" data-keywords="The Paths of Penance, Temple of the West Wind">Icy Dock</a>
+    <a href="location pages/khotandock.html" class="btn" data-keywords="Khotan">Khotan Dock</a>
+    <a href="location pages/minamidocks.html" class="btn" data-keywords="Yagizawa Village, Governor's Compound">Minami Docks</a>
+    <a href="location pages/subatatempledocks.html" class="btn" data-keywords="Subata Temple, Subata Teahouse">Subata Temple Docks</a>
+    <a href="location pages/verdantdock.html" class="btn" data-keywords="Corrupted Shrine, Temple of the East Wind">Verdant Dock</a>
+    <a href="location pages/windydocks.html" class="btn" data-keywords="Ravaged Valley, Lake of the Rising Sun, Lake Floor">Windy Docks</a>
+    <!-- Add others -->
+  </div>
+
+    <div class="dock-list">
+        <h2>Stagecoachable Docks</h2>
+        <a href="location pages/kitanishidock.html" data-keywords="Sujimura Village, Moomori Compound, Nishi Dock, Moomori Clanhold Cave, Moomori Clanhold Village, Bandit Cave, Valley of the Titans, Temple, Sujimura Teahouse" class="btn">Kita Dock</a>
+        <a href="location pages/hamamitsugardendocks.html" class="btn" data-keywords="Hamamitsu Garden, Zhu Ro's Teahouse">Hamamitsu Garden Docks</a>
+        <a href="location pages/subatatempledocks.html" class="btn" data-keywords="Subata Temple, Subata Teahouse">Subata Temple Docks</a>
+        <a href="location pages/khotandock.html" class="btn" data-keywords="Khotan">Khotan Dock</a>
+        <a href="location pages/windydocks.html" class="btn" data-keywords="Ravaged Valley, Lake of the Rising Sun, Lake Floor">Windy Docks</a>
+        <a href="location pages/icydock.html" class="btn" data-keywords="The Paths of Penance, Temple of the West Wind">Icy Dock</a>
+        <a href="location pages/crimsondock.html" class="btn" data-keywords="Temple of the South Wind, Sacred Mountain, Monkey King's Cave">Crimson Dock</a>
+        <!-- Add others -->
+    </div>
+
+  <h2>Skyway Maps</h2>
+  <div class="dock-list">
+    <a href="location pages/hamamitsuskywaymap.html" class="btn" data-keywords="Marleybone Stormgate, Skull Island Stormgate, Valencia Stormgate, Vortex of Fury">Hamamitsu Skyway Map</a>
+    <a href="location pages/khotanskywaymap.html" class="btn" data-keywords="Tai Foon Vortex, Vortex of Discord, Vortex of Strife, Kaizoku Jima, Rokugara Island, Yama Kai, Nishi Dock, Minami Docks">Khotan Skyway Map</a>
+    <a href="location pages/subataskywaymap.html" class="btn" data-keywords="Shadow Fortress, Maruzame Castle, Hamakala Temple, Raven Island, Wai no Shrine, Vortex of Disruption, Verdant Dock, Ashen Docks">Subata Skyway Map</a>
+    <!-- Add more skyway maps -->
+  </div>
+
+  <h2>Navigation Tips</h2>
+  <a href="tips.html" class="btn">Tips for Navigating</a>
+
+  <script>
+  document.getElementById("searchBar").addEventListener("input", function() {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll(".dock-list a").forEach(link => {
+      const keywords = link.dataset.keywords || "";
+      const text = link.textContent.toLowerCase();
+      link.style.display = text.includes(query) || keywords.toLowerCase().includes(query) ? "inline-block" : "none";
+    });
+  });
+  </script>
+</body>
+</html>

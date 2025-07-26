@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("images/locationbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.dock-layout {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.dock-layout img {
+  width: 45%;
+  border-radius: 8px;
+}
+
+#searchBar {
+  padding: 10px;
+  width: 50%;
+  margin-bottom: 20px;
+}
